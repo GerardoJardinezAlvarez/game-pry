@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecciona la Dificultad</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Encuentra el Tesoro</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="difficulty.html" class="nav-link">Dificultad</a></li>
+        <li class="nav-item"><a href="game.html" class="nav-link">Jugar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Fondo oscuro con imagen temática -->
+  <div class="content-container">
+    <h1>Selecciona la Dificultad</h1>
+
+    <!-- Imagen o ícono -->
+    <img src="./img/halloween-ghost.png" alt="Fantasma de Halloween" class="icon ghost-icon">
+
+    <!-- Tarjetas de selección de dificultad -->
+    <div class="flex-container">
+      <div class="card difficulty-card">
+        <h3>Fácil</h3>
+        <p>Tablero 4x4 y 10 intentos.</p>
+        <a href="game.html?difficulty=easy" class="btn">Jugar</a>
+      </div>
+      <div class="card difficulty-card">
+        <h3>Normal</h3>
+        <p>Tablero 6x6 y 15 intentos.</p>
+        <a href="game.html?difficulty=normal" class="btn">Jugar</a>
+      </div>
+      <div class="card difficulty-card">
+        <h3>Difícil</h3>
+        <p>Tablero 8x8 y 20 intentos.</p>
+        <a href="game.html?difficulty=hard" class="btn">Jugar</a>
+      </div>
+      <div class="card difficulty-card">
+        <h3>Extremo</h3>
+        <p>Tablero 10x10 y 25 intentos.</p>
+        <a href="game.html?difficulty=extreme" class="btn">Jugar</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f8f8f8;
+    margin: 0;
+    padding-top: 80px; /* Espacio para la navbar */
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #ff7518;
+    text-shadow: 2px 2px 8px #000;
+  }
+  
+  h2 {
+    color: #ffeb3b;
+    font-size: 2rem;
+  }
+  
+  .icon {
+    margin: 20px auto;
+    display: block;
+  }
+  
+  .pumpkin-icon {
+    width: 120px;
+  }
+  
+  .ghost-icon {
+    width: 100px;
+  }
+  
+  /* Barra de navegación */
+  .navbar {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-logo {
+    color: #ff7518;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ff7518;
+  }
+  
+  /* Estilos del tablero */
+  #board {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+    justify-items: center;
+  }
+  
+  /* Casillas del tablero */
+  .cell {
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border: 2px solid #ff7518;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cell:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 117, 24, 0.8);
+  }
+  
+  /* Colores cuando se selecciona la casilla */
+  .cell.missed {
+    background-color: #9e1c1c;
+  }
+  
+  .cell.treasure-found {
+    background-color: #ffeb3b;
+  }
+  
+  .cell.disabled {
+    pointer-events: none;
+  }
+  
+  /* Notificaciones */
+  #notification-container {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  #notification {
+    display: none;
+    background-color: #ff7518;
+    color: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  }
+  
+  #notification.show {
+    display: block;
+  }
+  
+  /* Estilos de las tarjetas (cards) */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffeb3b;
+    border: 2px solid #ff7518;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  }
+  
+  .difficulty-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .difficulty-card p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #333;
+    color: #ff7518;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #ff7518;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ff7518;
+    color: #1a1a1a;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 117, 24, 0.8);
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .btn, .difficulty-card h3, .difficulty-card p {
+      font-size: 1.2rem;
+    }
+  
+    .card {
+      width: 200px;
+    }
+  
+    .cell {
+      width: 50px;
+      height: 50px;
+    }
+  
+    #message, #attempts {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .btn, .difficulty-card h3, .difficulty-card p {
+      font-size: 1rem;
+    }
+  
+    .card {
+      width: 180px;
+    }
+  
+    .cell {
+      width: 40px;
+      height: 40px;
+    }
+  
+    #message, #attempts {
+      font-size: 1rem;
+    }
+  }
+  

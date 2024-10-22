@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuentra el Tesoro - Juego</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Encuentra el Tesoro</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="difficulty.html" class="nav-link">Dificultad</a></li>
+        <li class="nav-item"><a href="game.html" class="nav-link">Jugar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="content-container">
+    <h1>¡Encuentra el Tesoro!</h1>
+
+    <!-- Banner de notificación -->
+    <div id="notification-container">
+      <div id="notification"></div>
+    </div>
+
+    <!-- Contenedor del tablero y casillas -->
+    <div id="game-container">
+      <p id="message" class="text-xl mb-4">Selecciona una casilla.</p>
+      <div id="board"></div> <!-- Aquí se generarán las casillas -->
+      <p id="attempts" class="mt-4">Intentos restantes: 0</p>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
